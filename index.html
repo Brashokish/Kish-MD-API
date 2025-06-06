@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kish-MD API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #121212;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #00ffe5;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #bbb;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .endpoints {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .endpoint {
+      background: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .endpoint h3 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: #00ffe5;
+    }
+    .endpoint p {
+      font-size: 1rem;
+      color: #ccc;
+    }
+    .endpoint a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #00ffe5;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+    }
+    .endpoint a:hover {
+      background: #00e0c1;
+    }
+    footer {
+      background: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Kish-MD API</h1>
+    <p>Music, Video Downloader & AI Chat powered by Gemini & Maher Zubair APIs</p>
+  </header>
+  <main class="container">
+    <h2>Available API Endpoints</h2>
+    <div class="endpoints">
+      <div class="endpoint">
+        <h3>/play?text=songname</h3>
+        <p>Download MP3 audio from YouTube by song name.</p>
+      </div>
+      <div class="endpoint">
+        <h3>POST /gpt</h3>
+        <p>Chat with Gemini AI. JSON body: <code>{ "prompt": "your question" }</code></p>
+      </div>
+      <div class="endpoint">
+        <h3>/tiktok?url=video_url</h3>
+        <p>Download TikTok video metadata via Maher API.</p>
+      </div>
+      <div class="endpoint">
+        <h3>/facebook?url=video_url</h3>
+        <p>Download Facebook video metadata via Maher API.</p>
+      </div>
+      <div class="endpoint">
+        <h3>/youtube?url=video_url</h3>
+        <p>Download YouTube video metadata via Maher API.</p>
+      </div>
+      <div class="endpoint">
+        <h3>/lyrics?text=songname</h3>
+        <p>Get song lyrics via Maher API.</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 Kish-MD API by Brashokish. All rights reserved.
+  </footer>
+</body>
+</html>
